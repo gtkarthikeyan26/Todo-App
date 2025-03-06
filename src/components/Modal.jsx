@@ -21,9 +21,13 @@ export default function Modal({children,buttonName,ref}) {
     }
 
     return createPortal(
-        <dialog ref={dialog} className="backdrop:bg-stone-900/90 p-4 rounded-md shadow-md">
-            {children}
-            <form method="dialog" className="mt-4 text-right"><Button>{buttonName}</Button></form>
+        <dialog ref={dialog} className="backdrop:bg-stone-900/90 p-4 md:p-6 rounded-md shadow-md w-[90%] md:w-[60%] max-w-2xl mx-auto">
+            <div className="max-h-[80vh] overflow-y-auto">
+                {children}
+            </div>
+            <form method="dialog" className="mt-4 text-right">
+                <Button>{buttonName}</Button>
+            </form>
         </dialog>,
         modalRoot
     );

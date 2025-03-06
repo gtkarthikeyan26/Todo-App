@@ -16,15 +16,15 @@ export default function NewTask({ onAdd }) {
   }
 
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex flex-col sm:flex-row items-center gap-4">
       <input
         type="text"
-        className="w-64 px-2 py-1 rounded-sm bg-stone-200"
+        className="w-full sm:w-64 px-2 py-1 rounded-sm bg-stone-200"
         onChange={handleChange}
         value={enteredTask}
       />
       <button
-        className="text-stone-700 hover:text-stone-950"
+        className="w-full sm:w-auto px-4 py-1 text-stone-700 hover:text-stone-950"
         onClick={handleClick}
       >
         Add Task
